@@ -9,8 +9,8 @@ class Pawn(
 
     override val type: Piece.Type = Piece.Type.Pawn
 
-    override fun getAvailableMoves(pieces: List<Piece>): List<IntOffset> {
-        return emptyList()
+    override fun getAvailableMoves(pieces: List<Piece>): Set<IntOffset> {
+        return emptySet()
     }
 
 }

@@ -31,5 +31,5 @@ interface Piece {
         }
     }
 
-    fun getAvailableMoves(pieces: List<Piece>): List<IntOffset>
+    fun getAvailableMoves(pieces: List<Piece>): Set<IntOffset>
 }
