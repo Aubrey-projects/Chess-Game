@@ -26,9 +26,9 @@ interface Piece {
     enum class Type(val type: String) {
         // Possible piece types
         Pawn("pawn"),
-        Knight("knight"),
+        Knight("horse"),
         Bishop("bishop"),
-        Rook("rook"),
+        Rook("castle"),
         Queen("queen"),
         King("king");
 
@@ -41,4 +41,8 @@ interface Piece {
 
     // Depending on where the other pieces are on the board, returns a set of possible moves
     fun getAvailableMoves(pieces: List<Piece>): Set<IntOffset>
+
+    fun IntOffset.isOnBoard(): Boolean {
+        return x in 1..8 && y in 1..8
+    }
 }
